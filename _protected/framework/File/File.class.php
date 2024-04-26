@@ -629,10 +629,9 @@ class File
         /* Figure out the MIME type (if not specified) */
         if (empty($sMimeType)) {
             $sFileExtension = $this->getFileExt($sFile);
-
             $mGetMimeType = $this->getMimeType($sFileExtension);
 
-            $sMimeType = 'application/force-download';
+            $sMimeType = 'application/octet-stream'; // default MIME type
             if (!empty($mGetMimeType)) {
                 $sMimeType = $mGetMimeType;
             }
