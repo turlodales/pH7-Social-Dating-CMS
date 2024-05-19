@@ -1,7 +1,7 @@
 <?php
 /**
  * @author           Pierre-Henry Soria <hello@ph7builder.com>
- * @copyright        (c) 2012-2023, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright        (c) 2012-2024, Pierre-Henry Soria. All Rights Reserved.
  * @license          MIT License; See LICENSE.md and COPYRIGHT.md in the root directory.
  * @link             https://ph7builder.com
  * @package          PH7 / Install / Library
@@ -32,7 +32,7 @@ abstract class Controller implements Controllable
     public const SOFTWARE_COPYRIGHT = '© (c) 2012-%s, Pierre-Henry Soria. All Rights Reserved.';
 
     public const SOFTWARE_VERSION_NAME = 'SENSATION';
-    public const SOFTWARE_VERSION = '18.0.0';
+    public const SOFTWARE_VERSION = '18.1.0';
 
     public const SOFTWARE_BUILD = '1';
 
