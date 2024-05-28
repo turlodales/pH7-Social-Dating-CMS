@@ -22,12 +22,12 @@ With **[pH7Builder](https://sourceforge.net/projects/ph7socialdating/files/lates
 
 ### 🤗 100% Owned by YOU! ❤
 
-**Don't let your webapp be controlled by others! 🚀**
+**Don't let your Web app be at the mercy of others!​​​​​​​​​​​​​​​​ 🚀** 
 
-Why your business has to be under the mercy of others?
+Why should your business be at the mercy of others?
 
-Unlike cloud or SaaS solutions, by choosing pH7Builder, you have the complete control of your website, database and your users!
-You get and own all data and files hosted to your own server (the one you choose) ✌️
+Unlike cloud or SaaS solutions, by choosing pH7Builder, you have complete control of your website, database, and your users!
+You get and own all data and files hosted on your own server (the one you choose) ✌️
 
 
 👉 Convinced by the software? ☕️ You could boost the software development by **[offering a coffee](https://www.buymeacoffee.com/ph7cms)**! 🚀🤗
