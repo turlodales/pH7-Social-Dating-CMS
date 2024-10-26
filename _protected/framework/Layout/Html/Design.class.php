@@ -134,7 +134,8 @@ class Design
     }
 
     /**
-     * For better SEO optimization for multilingual sites. Ref: https://support.google.com/webmasters/answer/189077
+     * Adds hreflang link tag attributes to specify the language and geographical targeting of a webpage.
+     * For better SEO optimization to handle multilingual sites. Ref: https://support.google.com/webmasters/answer/189077
      *
      * @return void
      */
