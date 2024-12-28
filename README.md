@@ -1,7 +1,7 @@
 
 # pH7 Social Dating Builder
 
-## ⚡️ The 2023 <span style="text-decoration:underline">Social Dating Killer WebApp Builder</span>
+## ⚡️ The 2024 <span style="text-decoration:underline">Social Dating WebApp Builder</span>
 
 ### 🚀 Secure, User-Friendly & Open Source Social Dating Web App Software
 
@@ -13,7 +13,7 @@
 **pH7Builder** (formerly known as **pH7CMS**) is the first Professional, Free and Open Source Social Dating Site Builder Software. By far, the first choice for creating enterprise-level Dating Apps/Service or social networking sites.
 
 
-**✨ Imagine in 3 months' time, you have a well-known successful online community with thousands of happy users and without spending a dime for it! Instead, you spent money on advertising, user acquisition, and other marketing strategies... Imagine the time you have saved. The amazing business and freedom you have now created.**
+**✨ Imagine in 3 months' time, you have a well-known, successful online community with thousands of happy users without spending a dime for it! Instead, you spent money on advertising, user acquisition, and other marketing strategies... Imagine the time you have saved. The amazing business and freedom you have now created.**
 
 With **[pH7Builder](https://sourceforge.net/projects/ph7socialdating/files/latest/download)**, *THIS IS TOTALLY POSSIBLE!* (however, you have to be motivated! Nothing comes as magic).
 
@@ -22,12 +22,12 @@ With **[pH7Builder](https://sourceforge.net/projects/ph7socialdating/files/lates
 
 ### 🤗 100% Owned by YOU! ❤
 
-**Don't let your webapp be controlled by others! 🚀**
+**Don't let your Web app be at the mercy of others!​​​​​​​​​​​​​​​​ 🚀** 
 
-Why your business has to be under the mercy of others?
+Why should your business be at the mercy of others?
 
-Unlike cloud or SaaS solutions, by choosing pH7Builder, you have the complete control of your website, database and your users!
-You get and own all data and files hosted to your own server (the one you choose) ✌️
+Unlike cloud or SaaS solutions, by choosing pH7Builder, you have complete control of your website, database, and your users!
+You get and own all data and files hosted on your own server (the one you choose) ✌️
 
 
 👉 Convinced by the software? ☕️ You could boost the software development by **[offering a coffee](https://www.buymeacoffee.com/ph7cms)**! 🚀🤗
@@ -61,7 +61,9 @@ You get and own all data and files hosted to your own server (the one you choose
 
 It is designed with the **KISS** principle in mind, and the whole source code can be read and understood in minutes. For better flexibility, the software uses **PDO** (PHP Data Objects) abstraction which allows the choice of the database. The principle of development is **DRY** (Don't Repeat Yourself) aimed at reducing repetition of information of all kinds (no duplicate code) and **YAGNI** principle to avoid unused code/not needed functionality in the software.
 
-This Free and Open Source **Social Dating Site Builder** wants to be low resource-intensive, powerful, stable and secure. The software also comes with 40+ system modules and is based on **[pH7Framework](https://github.com/pH7Software/pH7-Social-Dating-CMS/tree/17.x/_protected/framework#ph7framework)** *(written specifically for this project)* that has over 52 packages.
+This Free and Open Source **Social Dating Site Builder** aims to be low resource-intensive, powerful, stable and secure.
+
+Based on **[pH7Framework](https://github.com/pH7Software/pH7-Social-Dating-CMS/tree/18.x/_protected/framework#ph7framework)**, a framework written specifically for this project, the CMS also comes with 40 system modules ready to be used.
 
 *To summarize, **pH7Builder** gives you **the perfect ingredients** to create the **best online dating service** or **social networking** website on the World Wide Web!*
 

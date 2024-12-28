@@ -1,7 +1,7 @@
 <?php
 /**
  * @author         Pierre-Henry Soria <hello@ph7builder.com>
- * @copyright      (c) 2016-2019, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright      (c) 2016-2024, Pierre-Henry Soria. All Rights Reserved.
  * @license        MIT License; See LICENSE.md and COPYRIGHT.md in the root directory.
  * @package        PH7 / App / System / Module / Two-Factor Auth / Controller
  */
@@ -24,30 +24,21 @@ class MainController extends Controller
     const WRONG_MODULE_ERROR_MESSAGE = 'Wrong "%s" module!';
     const BACKUP_CODE_FILE_EXT = '.txt';
 
-    /** @var TwoFactorAuthModel */
-    private $o2FactorModel;
+    private TwoFactorAuthModel $o2FactorModel;
+    private Authenticator $oAuthenticator;
 
-    /** @var Authenticator */
-    private $oAuthenticator;
-
-    /** @var string */
-    private $sMod;
-
-    /** @var int */
-    private $iIsEnabled;
-
-    /** @var int */
-    private $iProfileId;
+    private string $sMod;
+    private int $iIsEnabled;
+    private int $iProfileId;
 
     public function __construct()
     {
         parent::__construct();
 
         $this->oAuthenticator = new Authenticator($this->registry->site_url);
-
     }
 
-    public function verificationCode($sMod = '')
+    public function verificationCode(string $sMod = ''): void
     {
         $this->sMod = $sMod;
         $this->checkMod();
@@ -56,7 +47,7 @@ class MainController extends Controller
         $this->output();
     }
 
-    public function setup($sMod = '')
+    public function setup(string $sMod = ''): void
     {
         $this->sMod = $sMod;
         $this->checkMod();
@@ -98,10 +89,8 @@ class MainController extends Controller
      * Download the backup 2FA code (text file).
      *
      * @param string $sSecret The 2FA secret.
-     *
-     * @return void
      */
-    private function download($sSecret)
+    private function download(string $sSecret): void
     {
         $sFileName = '2FA-backup-code-' . $this->sMod . '-' . Url::clean($this->registry->site_name) . self::BACKUP_CODE_FILE_EXT;
         header('Content-Disposition: attachment; filename=' . $sFileName);
@@ -112,10 +101,8 @@ class MainController extends Controller
 
     /**
      * @param string $sSecret The 2FA secret code.
-     *
-     * @return string
      */
-    private function getBackupCodeMessage($sSecret)
+    private function getBackupCodeMessage(string $sSecret): string
     {
         $sTxtMsg = t('BACKUP VERIFICATION CODE - %site_url% | %0%', $this->sMod) . "\r\n\r\n";
         $sTxtMsg .= t('Code: %0%', $this->oAuthenticator->getCode($sSecret)) . "\r\n\r\n";
@@ -131,19 +118,17 @@ class MainController extends Controller
     /**
      * Get Session Profile ID.
      *
-     * @return int
-     *
      * @throws PH7InvalidArgumentException Explanatory message if the specified module is wrong.
      */
-    private function getProfileId()
+    private function getProfileId(): int
     {
         switch ($this->sMod) {
             case 'user':
-                return $this->session->get('member_id');
+                return (int)$this->session->get('member_id');
             case 'affiliate':
-                return $this->session->get('affiliate_id');
+                return (int)$this->session->get('affiliate_id');
             case PH7_ADMIN_MOD:
-                return $this->session->get('admin_id');
+                return (int)$this->session->get('admin_id');
 
             default:
                 throw new PH7InvalidArgumentException(
@@ -154,10 +139,8 @@ class MainController extends Controller
 
     /**
      * Turn on/off Two-Factor authentication.
-     *
-     * @return void
      */
-    private function update2FaStatus()
+    private function update2FaStatus(): void
     {
         $this->iIsEnabled = ($this->iIsEnabled === 1) ? 0 : 1; // Get the opposite value (if 1 so 0 | if 0 so 1)
 
@@ -170,22 +153,20 @@ class MainController extends Controller
      *
      * @return string Unique Authenticator Name for the site.
      */
-    private function getAuthenticatorName()
+    private function getAuthenticatorName(): string
     {
         return str_replace('/', '-', UrlName::parse($this->registry->site_url)) . '-' . $this->sMod;
     }
 
     /**
      * @param string $sSecret The 2FA secret code.
-     *
-     * @return bool
      */
-    private function isTwoFactorSet($sSecret)
+    private function isTwoFactorSet($sSecret): bool
     {
         return !empty($sSecret) && strlen($sSecret) > self::TWO_FACTOR_SECRET_STRING_LENGTH;
     }
 
-    private function checkMod()
+    private function checkMod(): void
     {
         if (!$this->isModValid()) {
             Header::redirect(
@@ -196,10 +177,7 @@ class MainController extends Controller
         }
     }
 
-    /**
-     * @return bool
-     */
-    private function isModValid()
+    private function isModValid(): bool
     {
         $aValidMods = [
             'user',

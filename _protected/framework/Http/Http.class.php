@@ -39,7 +39,6 @@ class Http
         303 => '303 See Other',
         304 => '304 Not Modified',
         305 => '305 Use Proxy',
-        306 => '306 Switch Proxy',
         307 => '307 Temporary Redirect',
         400 => '400 Bad Request',
         401 => '401 Unauthorized',
@@ -130,8 +129,7 @@ class Http
      */
     public static function setHeaders($mHeaders)
     {
-        // Header already sent
-        if (static::isSent()) {
+        if (static::areHeadersSent()) {
             throw new Exception('Headers were already sent.');
         }
 
@@ -302,7 +300,7 @@ class Http
      *
      * @return bool TRUE if the headers were sent, FALSE if not.
      */
-    private static function isSent(): bool
+    private static function areHeadersSent(): bool
     {
         return headers_sent();
     }
